@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实用罗盘</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .compass {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .compass-arrow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 4px;
+            height: 120px;
+            background-color: red;
+            transform-origin: bottom center;
+            transform: translate(-50%, -100%);
+            z-index: 10;
+        }
+        .direction {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 20px;
+            font-size: 24px;
+        }
+        .ring {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .marker {
+            position: absolute;
+            transform-origin: center;
+            font-size: 12px;
+            width: 20px;
+            text-align: center;
+        }
+        .bagua-ring { font-size: 14px; }
+        .tiangan-ring { font-size: 14px; }
+        .dizhi-ring { font-size: 14px; }
+        .mountains-ring { font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="compass">
+        <div class="compass-arrow"></div>
+        <div class="direction">北</div>
+        <div class="ring bagua-ring"></div>
+        <div class="ring tiangan-ring"></div>
+        <div class="ring dizhi-ring"></div>
+        <div class="ring mountains-ring"></div>
+    </div>
+    <script src="compass.js"></script>
+</body>
+</html> 
